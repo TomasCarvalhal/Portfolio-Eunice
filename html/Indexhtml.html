@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Explore activities, projects, and people from the EUNICE European University alliance."
+    >
+   <title>EUNICE Activity Portfolio · 2023—2026</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/javascript.js" defer></script>
+  </head>
+  <body>
+    <section class="home-view" id="home" aria-labelledby="home-title">
+      <header class="home-header">
+        <a class="brand-logo" href="#home" aria-label="EUNICE Activity Portfolio home">
+          <img src="../img/eunice-logo.png" alt="EUNICE European University">
+        </a>
+      </header>
+
+      <div class="home-map" aria-hidden="true">
+        <img src="img/europe-map.jpg" alt="">
+      </div>
+
+      <div class="home-content">
+        <span class="eyebrow">EUNICE GLOBAL STUDENT PORTFOLIO</span>
+        <h1 id="home-title">Activity Portfolio</h1>
+        <strong class="hero-years">2023—2026</strong>
+        <p>Discover the experiences, projects, and people that make Europe our campus.</p>
+        <button class="primary-cta" id="explore-button" type="button">Explore</button>
+      </div>
+    </section>
+
+    <section class="explorer-view" id="activities" aria-labelledby="explorer-title">
+      <header class="explorer-heading">
+        <span class="eyebrow">ACTIVITIES · 2023—2026</span>
+        <h2 id="explorer-title">Explore the portfolio</h2>
+        <p>Search by activity, topic, location, or EUNICE key competence.</p>
+      </header>
+
+      <div class="search-panel">
+        <label class="search-field">
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="11" cy="11" r="6"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg>
+          <span class="visually-hidden">Search activities</span>
+          <input id="activity-search" type="search" placeholder="Search activities..." autocomplete="off">
+          <button id="clear-search" type="button" aria-label="Clear search" hidden>
+            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="m6 6 12 12M18 6 6 18"></path>
+            </svg>
+          </button>
+        </label>
+        <button
+          class="mobile-filter-toggle"
+          id="filter-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="filter-panel"
+        >
+          <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M7 12h10M10 18h4"></path>
+          </svg>
+          <span>Filters</span>
+        </button>
+      </div>
+
+      <div class="explorer-layout">
+        <aside class="filter-panel" id="filter-panel" aria-label="Activity filters">
+          <div class="filter-panel-header">
+            <span>FILTERS</span>
+            <button id="clear-filters" type="button" disabled>Clear all</button>
+          </div>
+
+          <div class="filter-group">
+            <h3>Topics</h3>
+            <div class="filter-tags" id="category-filters"></div>
+          </div>
+
+          <div class="filter-group">
+            <h3>EUNICE Key Competences</h3>
+            <div class="filter-tags" id="competency-filters"></div>
+          </div>
+        </aside>
+
+        <main class="results" aria-live="polite">
+          <div class="activity-grid" id="activity-grid"></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span>NO MATCHES</span>
+            <h3>No activities found</h3>
+            <p>Try another search term or clear the selected filters.</p>
+            <button id="reset-explorer" type="button">Reset explorer</button>
+          </div>
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <div>
+          <a class="brand-logo" href="#home" aria-label="Back to the top">
+            <img src="img/eunice-logo.png" alt="EUNICE European University">
+          </a>
+        </div>
+        <p>Activity Portfolio</p>
+        <span>© 2026 EUNICE European University</span>
+      </footer>
+    </section>
+
+    <div id="modal-root"></div>
+  </body>
+</html>
